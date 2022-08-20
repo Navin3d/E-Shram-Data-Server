@@ -1,0 +1,26 @@
+from django.db import models
+
+
+class Employees(models.Model):
+    firstName = models.CharField(max_length=20)
+    lastName = models.CharField(max_length=20)
+    age = models.IntegerField(default=18)
+    gender = models.CharField(max_length=20)
+    prefferedWorkType = models.CharField(max_length=20)
+    cvUrl = models.CharField(max_length=2080, blank=True)
+    aadharId = models.CharField(max_length=20)
+    email = models.CharField(max_length=50)
+    mobileNumber = models.IntegerField()
+    address = models.CharField(max_length=3000)
+    location = models.CharField(max_length=50)
+    state = models.CharField(max_length=50)
+    readyToRelocate = models.BooleanField(default=False)
+    hasDrivingLicence = models.BooleanField(default=False)
+    hasVehicle = models.BooleanField(default=False)
+    expectedWagePerHour = models.IntegerField()
+    expectedWorkingHoursPerWeek = models.IntegerField()
+    isTechnicalWorker = models.BooleanField(default=False)
+    isOccupied = models.BooleanField(default=False)
+    isBlocked = models.BooleanField(default=False)
+    physicalHealthPoints = models.IntegerField()
+    mentalHealthPoints = models.IntegerField()
