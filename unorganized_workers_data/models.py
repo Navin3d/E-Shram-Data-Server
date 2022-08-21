@@ -24,3 +24,5 @@ class Employees(models.Model):
     isBlocked = models.BooleanField(default=False)
     physicalHealthPoints = models.IntegerField()
     mentalHealthPoints = models.IntegerField()
+    knowsToOperateMobile = models.BooleanField(default=False)
+    knowsToReadAndWrite = models.BooleanField(default=False)

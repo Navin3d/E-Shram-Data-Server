@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-uvqgd#v#oo((=%qqg^@v!hn@ajf5$%==9s8+1p0m$%&cv0pyi6'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'corsheaders',
-    'unorganized_workers_data'
+    'unorganized_workers_data',
+    'rest_framework_swagger',
 ]
 
 MIDDLEWARE = [
@@ -130,3 +131,5 @@ CORS_ORIGIN_WHITELIST = [
     'http://localhost:8080',
     'http://e-shram.herokuapp.com',
 ]
+
+REST_FRAMEWORK = { 'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema' }

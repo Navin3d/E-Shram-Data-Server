@@ -1,10 +1,16 @@
+from webbrowser import get
+
 from django.shortcuts import render
 from rest_framework.views import APIView
 from rest_framework import status
 from rest_framework.response import Response
+from rest_framework_swagger.views import get_swagger_view
 
 from .models import Employees
 from .serializers import EmployeesSerializers
+
+
+schema_view = get_swagger_view(title="aois")
 
 
 class EmployeeView(APIView):
